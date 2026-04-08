@@ -1,0 +1,13 @@
+# 환경 변수 (API 키 포함) — 절대 커밋 금지
+.env
+
+# 의존성
+node_modules/
+
+# 로그
+*.log
+npm-debug.log*
+
+# OS
+.DS_Store
+Thumbs.db
