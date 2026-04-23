@@ -12,5 +12,6 @@ final String kBaseUrl = (defaultTargetPlatform == TargetPlatform.android)
     ? 'http://10.0.2.2:3000'
     : 'http://localhost:3000';
 
-const Color kPrimary = Color(0xFFFF6B35);
-const Color kBackground = Color(0xFFF5F5F5);
+const Color kPrimary = Color(0xFF2A7D52);
+const Color kBackground = Color(0xFFF0FAF5);
+const Color kAccentLight = Color(0xFFE8F5EE);

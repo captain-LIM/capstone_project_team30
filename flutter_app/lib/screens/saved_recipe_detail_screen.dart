@@ -70,7 +70,7 @@ class SavedRecipeDetailScreen extends StatelessWidget {
               Container(
                 padding: const EdgeInsets.all(16),
                 decoration: BoxDecoration(
-                  color: const Color(0xFFFFF8F6),
+                  color: const Color(0xFFF2FAF6),
                   borderRadius: BorderRadius.circular(20),
                   border: Border.all(color: kPrimary.withOpacity(0.4)),
                 ),

@@ -36,7 +36,7 @@ class _HomeScreenState extends State<HomeScreen> {
     });
   }
 
-  // 고양이 말풍선 메시지 (상태에 따라 변경)
+  // 말풍선 메시지 (상태에 따라 변경)
   String get _catMessage {
     if (_isAnalyzing) return '재료를 열심히 분석하고 있어요! 잠깐만요';
     if (_isLoadingRecipes) return '어떤 레시피가 맛있을지 생각 중이에요...';
@@ -68,7 +68,7 @@ class _HomeScreenState extends State<HomeScreen> {
             const SizedBox(height: 16),
             ListTile(
               leading: const CircleAvatar(
-                backgroundColor: Color(0xFFFFF0EA),
+                backgroundColor: kAccentLight,
                 child: Icon(Icons.camera_alt, color: kPrimary),
               ),
               title: const Text('카메라로 촬영'),
@@ -76,7 +76,7 @@ class _HomeScreenState extends State<HomeScreen> {
             ),
             ListTile(
               leading: const CircleAvatar(
-                backgroundColor: Color(0xFFFFF0EA),
+                backgroundColor: kAccentLight,
                 child: Icon(Icons.photo_library, color: kPrimary),
               ),
               title: const Text('갤러리에서 선택'),
@@ -206,13 +206,13 @@ class _HomeScreenState extends State<HomeScreen> {
                   gradient: LinearGradient(
                     begin: Alignment.topLeft,
                     end: Alignment.bottomRight,
-                    colors: [Color(0xFFFF6B35), Color(0xFFFF8C42)],
+                    colors: [Color(0xFF1A4A35), Color(0xFF2A7D52)],
                   ),
                 ),
                 child: Align(
                   alignment: const Alignment(0, 0.3),
                   child: Text(
-                    '냉장고 사진으로 레시피를 찾아보세요 🍳',
+                    '냉장고 사진으로 레시피를 찾아보세요',
                     style: GoogleFonts.jua(color: Colors.white70, fontSize: 13),
                   ),
                 ),
@@ -319,7 +319,7 @@ class _CatMascotRow extends StatelessWidget {
     return Row(
       crossAxisAlignment: CrossAxisAlignment.end,
       children: [
-        // 고양이 이미지 (배경 제거된 형태)
+        // 냉장고 이미지 (배경 제거된 형태)
         Image.asset(
           'assets/main.png',
           height: 100,
@@ -532,7 +532,7 @@ class _IngredientsCard extends StatelessWidget {
                 label: Text(item),
                 deleteIcon: const Icon(Icons.close, size: 16),
                 onDeleted: () => onRemove(item),
-                backgroundColor: const Color(0xFFFFF0EA),
+                backgroundColor: kAccentLight,
                 deleteIconColor: kPrimary,
                 labelStyle: const TextStyle(color: kPrimary),
                 side: const BorderSide(color: kPrimary, width: 0.5),
@@ -644,14 +644,14 @@ class _IngredientTag extends StatelessWidget {
   Widget build(BuildContext context) => Container(
         padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 3),
         decoration: BoxDecoration(
-          color: available ? Colors.green.withOpacity(0.1) : Colors.orange.withOpacity(0.1),
+          color: available ? kAccentLight : const Color(0xFFE8F0FE),
           borderRadius: BorderRadius.circular(10),
         ),
         child: Text(
           text,
           style: TextStyle(
             fontSize: 11,
-            color: available ? Colors.green[700] : Colors.orange[700],
+            color: available ? const Color(0xFF2A7D52) : const Color(0xFF1A56A0),
           ),
         ),
       );
